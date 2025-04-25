@@ -1,0 +1,12 @@
+Installing on a nested virtualization platform (vm in another vm)
+- Get iso image 
+- Install vmware work statation
+- Ensure intel vt-x is enabled and ensure secure visualization is disabled
+  systeminfo | find "Virtualization"
+  Virtualization-based security: Status: Not enabled
+                               Virtualization Enabled In Firmware: Yes
+
+ to disable it : windows security > device security > isolation > memory intergrity > turn off
+- create ESXI Host vm in vmware work station
+- ensure you enable intel vt-x on the vm itself under setting > processor
+- attach ESXI iso on vm then power it on and follow prompt
